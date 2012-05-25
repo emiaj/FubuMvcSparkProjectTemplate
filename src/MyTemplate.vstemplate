@@ -1,0 +1,90 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>FubuMvcApp</Name>
+    <Description>FubuMvc Web Application</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FubuMvcApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="FubuMvcApp.csproj" File="FubuMvcApp.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="app.script.config">app.script.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppRegistry.cs">AppRegistry.cs</ProjectItem>
+      <Folder Name="content" TargetFolderName="content">
+        <Folder Name="images" TargetFolderName="images" />
+        <Folder Name="scripts" TargetFolderName="scripts">
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2-vsdoc.js">jquery-1.7.2-vsdoc.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2.js">jquery-1.7.2.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2.min.js">jquery-1.7.2.min.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="site.js">site.js</ProjectItem>
+        </Folder>
+        <Folder Name="styles" TargetFolderName="styles">
+          <ProjectItem ReplaceParameters="true" TargetFileName="site.css">site.css</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <Folder Name="Handlers" TargetFolderName="Handlers">
+        <Folder Name="About" TargetFolderName="About">
+          <ProjectItem ReplaceParameters="true" TargetFileName="AboutUs.spark">AboutUs.spark</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="AboutUsHandler.cs">AboutUsHandler.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Account" TargetFolderName="Account">
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOffHandler.cs">LogOffHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOn.spark">LogOn.spark</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOnHandler.cs">LogOnHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Register.spark">Register.spark</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RegisterHandler.cs">RegisterHandler.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="HomeHandler.cs">HomeHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.spark">Index.spark</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IMembershipService.cs">IMembershipService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="InMemoryMembershipService.cs">InMemoryMembershipService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Shared" TargetFolderName="Shared">
+        <ProjectItem ReplaceParameters="true" TargetFileName="_LogOnPartial.spark">_LogOnPartial.spark</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Application.spark">Application.spark</ProjectItem>
+      </Folder>
+      <Folder Name="UI" TargetFolderName="UI">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppHtmlConventions.cs">AppHtmlConventions.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+      <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+      <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>  
+  <WizardData>
+    <packages repository="template">
+  <package id="Bottles" version="0.9.1.274" />
+  <package id="CommonServiceLocator" version="1.0" />
+  <package id="FubuCore" version="0.9.9.149" />
+  <package id="FubuLocalization" version="0.9.5.17" />
+  <package id="FubuMVC.References" version="0.9.5.926" />
+  <package id="FubuMVC.Spark" version="0.9.5.926" />
+  <package id="HtmlTags" version="1.1.0.72" />
+  <package id="Spark" version="1.6" />
+  <package id="structuremap" version="2.6.3" />
+    </packages>
+  </WizardData>
+</VSTemplate>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title><use:title /></title>
+    ${this.WriteCssTags("site.style")}
+    ${this.WriteScriptTags("site.script")}
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>My FUBUMVC Application</h1>
+            </div>
+
+            <div id="logindisplay">
+                <LogOnPartial />
+            </div>
+
+            <div id="menucontainer">
+
+                <ul id="menu">
+                    <li>${this.LinkTo[[$safeprojectname$.Handlers.Home.IndexInput]]().Text("Home")}</li>
+                    <li>${this.LinkTo[[$safeprojectname$.Handlers.About.AboutUsInput]]().Text("About")}</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="main">
+            <use:view />
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

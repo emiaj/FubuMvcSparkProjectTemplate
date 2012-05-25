@@ -1,0 +1,8 @@
+﻿<viewdata model="$safeprojectname$.Handlers.Home.IndexModel" />
+<content:title>
+Home Page
+</content:title>
+<h2>${Model.Message}</h2>
+<p>
+    To learn more about FUBUMVC visit <a href="http://mvc.fubu-project.org/" title="FUBUMVC Website">http://mvc.fubu-project.org/</a>.
+</p>
