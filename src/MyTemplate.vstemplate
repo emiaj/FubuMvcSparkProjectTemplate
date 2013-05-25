@@ -17,38 +17,35 @@
   <TemplateContent>
     <Project TargetFileName="FubuMvcApp.csproj" File="FubuMvcApp.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="app.script.config">app.script.config</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="AppRegistry.cs">AppRegistry.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="BootstrapFubu.cs">BootstrapFubu.cs</ProjectItem>
       <Folder Name="content" TargetFolderName="content">
         <Folder Name="images" TargetFolderName="images" />
         <Folder Name="scripts" TargetFolderName="scripts">
-          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2-vsdoc.js">jquery-1.7.2-vsdoc.js</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2.js">jquery-1.7.2.js</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.7.2.min.js">jquery-1.7.2.min.js</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="site.js">site.js</ProjectItem>
         </Folder>
         <Folder Name="styles" TargetFolderName="styles">
           <ProjectItem ReplaceParameters="true" TargetFileName="site.css">site.css</ProjectItem>
         </Folder>
       </Folder>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
-      <Folder Name="Handlers" TargetFolderName="Handlers">
+      <Folder Name="Endpoints" TargetFolderName="Endpoints">
         <Folder Name="About" TargetFolderName="About">
           <ProjectItem ReplaceParameters="true" TargetFileName="AboutUs.spark">AboutUs.spark</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="AboutUsHandler.cs">AboutUsHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="AboutUsEndpoint.cs">AboutUsEndpoint.cs</ProjectItem>
         </Folder>
         <Folder Name="Account" TargetFolderName="Account">
-          <ProjectItem ReplaceParameters="true" TargetFileName="LogOffHandler.cs">LogOffHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOffEndpoint.cs">LogOffEndpoint.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="LogOn.spark">LogOn.spark</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="LogOnHandler.cs">LogOnHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOnEndpoint.cs">LogOnEndpoint.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="Register.spark">Register.spark</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="RegisterHandler.cs">RegisterHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RegisterEndpoint.cs">RegisterEndpoint.cs</ProjectItem>
         </Folder>
         <Folder Name="Home" TargetFolderName="Home">
-          <ProjectItem ReplaceParameters="true" TargetFileName="HomeHandler.cs">HomeHandler.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="HomeEndpoint.cs">HomeEndpoint.cs</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="Index.spark">Index.spark</ProjectItem>
         </Folder>
       </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
@@ -59,8 +56,10 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
       </Folder>
       <Folder Name="Shared" TargetFolderName="Shared">
+        <ProjectItem ReplaceParameters="true" TargetFileName="_global.spark">_global.spark</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="_LogOnPartial.spark">_LogOnPartial.spark</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Application.spark">Application.spark</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bindings.xml">bindings.xml</ProjectItem>
       </Folder>
       <Folder Name="UI" TargetFolderName="UI">
         <ProjectItem ReplaceParameters="true" TargetFileName="AppHtmlConventions.cs">AppHtmlConventions.cs</ProjectItem>
@@ -76,15 +75,27 @@
   </WizardExtension>  
   <WizardData>
     <packages repository="template">
-  <package id="Bottles" version="0.9.1.274" />
-  <package id="CommonServiceLocator" version="1.0" />
-  <package id="FubuCore" version="0.9.9.149" />
-  <package id="FubuLocalization" version="0.9.5.17" />
-  <package id="FubuMVC.References" version="0.9.5.926" />
-  <package id="FubuMVC.Spark" version="0.9.5.926" />
-  <package id="HtmlTags" version="1.1.0.72" />
-  <package id="Spark" version="1.6" />
-  <package id="structuremap" version="2.6.3" />
+	  <package id="Bottles" version="1.0.0.443" targetFramework="net40" />
+	  <package id="FubuCore" version="1.0.0.225" targetFramework="net40" />
+	  <package id="FubuLocalization" version="0.9.5.126" targetFramework="net40" />
+	  <package id="FubuMVC.Core" version="1.0.1.1410" targetFramework="net40" />
+	  <package id="FubuMVC.Core.Assets" version="0.9.9.325" targetFramework="net40" />
+	  <package id="FubuMVC.Core.UI" version="1.0.1.351" targetFramework="net40" />
+	  <package id="FubuMVC.Core.View" version="1.0.0.383" targetFramework="net40" />
+	  <package id="FubuMVC.Diagnostics" version="0.9.6.215" targetFramework="net40" />
+	  <package id="FubuMVC.JQueryUI" version="0.5.0.226" targetFramework="net40" />
+	  <package id="FubuMVC.Media" version="0.9.5.318" targetFramework="net40" />
+	  <package id="FubuMVC.Navigation" version="0.9.0.88" targetFramework="net40" />
+	  <package id="FubuMVC.QuickStart" version="1.0.0.123" targetFramework="net40" />
+	  <package id="FubuMVC.QuickStart.Spark" version="1.0.0.123" targetFramework="net40" />
+	  <package id="FubuMVC.SlickGrid" version="0.0.0.435" targetFramework="net40" />
+	  <package id="FubuMVC.Spark" version="1.0.0.383" targetFramework="net40" />
+	  <package id="FubuMVC.StructureMap" version="1.0.1.1410" targetFramework="net40" />
+	  <package id="FubuMVC.TwitterBootstrap" version="0.0.0.433" targetFramework="net40" />
+	  <package id="HtmlTags" version="1.2.0.150" targetFramework="net40" />
+	  <package id="Spark" version="1.7.5.1" targetFramework="net40" />
+	  <package id="structuremap" version="2.6.4.1" targetFramework="net40" />
+	  <package id="WebActivator" version="1.1.0.0" targetFramework="net40" />
     </packages>
   </WizardData>
 </VSTemplate>
