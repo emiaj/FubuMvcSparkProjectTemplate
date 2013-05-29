@@ -21,8 +21,8 @@
             <div id="menucontainer">
 
                 <ul id="menu">
-                    <li>${this.LinkTo[[$safeprojectname$.Handlers.Home.IndexInput]]().Text("Home")}</li>
-                    <li>${this.LinkTo[[$safeprojectname$.Handlers.About.AboutUsInput]]().Text("About")}</li>
+                    <li>${this.LinkTo[[$safeprojectname$.Endpoints.Home.IndexInput]]().Text("Home")}</li>
+                    <li>${this.LinkTo[[$safeprojectname$.Endpoints.About.AboutUsInput]]().Text("About")}</li>
                 </ul>
 
             </div>
