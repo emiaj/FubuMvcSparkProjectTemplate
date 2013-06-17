@@ -8,7 +8,7 @@ ARTIFACTS = "artifacts"
 PRODUCT = "FubuMvcApp"
 SRC_DIR = "src"
 VSIX = "vsix"
-
+VSIX_CSHARP_WEB = VSIX +  "/ProjectTemplates/CSharp/Web/"
 # Add directories to Rake's clean task
 CLEAN.include(ARTIFACTS)
 
@@ -43,9 +43,10 @@ end
 
 desc "Creates the VSIX package"
 task :vsix do
-        mkdir_p VSIX
+		rm_rf VSIX_CSHARP_WEB
+        mkdir_p VSIX_CSHARP_WEB
         #copy the FubuMvcApp.zip to the vsix\ProjectTemplates\CSharp\Web folder
-		copy(File.join([ARTIFACTS], 'FubuMvcApp.zip'), 'vsix/ProjectTemplates/CSharp/Web')
+		copy(File.join([ARTIFACTS], 'FubuMvcApp.zip'), VSIX_CSHARP_WEB)
 		zip = ZipDirectory.new
         zip.directories_to_zip = VSIX
         zip.output_file = 'FubuMvcApp.vsix'
