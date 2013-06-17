@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="FubuMvc">
+		<Name>FubuMVC project template</Name>
+		<Author>Jaime Febres</Author>
+		<Version>1.1</Version>
+		<Description xml:space="preserve">A compositional, convention-based framework for complex web applications.
+This template allows you to quickly create a new FubuMVC web application. </Description>
+		<Locale>1033</Locale>
+		<MoreInfoUrl>http://mvc.fubu-project.org/</MoreInfoUrl>
+		<GettingStartedGuide>http://mvc.fubu-project.org/getting-started/</GettingStartedGuide>
+		<Icon>FubuMvc_64.png</Icon>
+		<PreviewImage>FubuMvc_256.png</PreviewImage>
+		<SupportedProducts>
+			<VisualStudio Version="10.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+				<Edition>Express_All</Edition>
+			</VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+	</Identifier>
+	<References />
+	<Content>
+		<ProjectTemplate>ProjectTemplates</ProjectTemplate>
+	</Content>
+</Vsix>
